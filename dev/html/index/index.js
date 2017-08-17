@@ -1,3 +1,4 @@
+import {Promise} from "babel-polyfill"
 ;(async function (param) { 
     var res = await new Promise(function(resolve, reject){
         setTimeout(function() {

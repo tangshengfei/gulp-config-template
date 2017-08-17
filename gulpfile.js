@@ -15,6 +15,8 @@ var merge = require("gulp-merge");
 var fs = require("fs");
 var path = require("path");
 
+var webpack = require("webpack-stream");
+
 const distBase = "./dist",
       buildBase = "./build",
       devBase = "./dev",
@@ -70,7 +72,16 @@ gulp.task("compile:less", function(){
 
 gulp.task("compile:js", function(){
     return gulp.src([`${devBase}/**/**/*.js`])
-        .pipe(gulpBabel())
+        .pipe(webpack({
+            module: {
+                loaders: [
+                    {
+                        test: /\.js$/,
+                        loader: "babel-loader"
+                    }
+                ]
+            }
+        }))
         .pipe(gulp.dest(`${distBase}`));
 });
 
@@ -88,4 +99,3 @@ gulp.task("del", function(){
 });
 
 gulp.task("dev", ["rev"]);
-
