@@ -1,38 +1,48 @@
 {
-  "name": "gulp-project",
+  "name": "webpack-config-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp dev"
+    "build": "webpack --color --progress",
+    "dev": "webpack-dev-server --hot --progress",
+    "start": "npm run dev"
   },
-  "keywords": [
-    "tang"
-  ],
   "author": "tang",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^7.1.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-plugin-istanbul": "^4.1.1",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.3.2",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2016": "^6.24.1",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-filter": "^5.0.1",
-    "gulp-if": "^2.0.2",
-    "gulp-less": "^3.3.2",
-    "gulp-merge": "^0.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-rev": "^8.0.0",
-    "gulp-rev-collector": "^1.2.2",
-    "gulp-rev-replace": "^0.4.3",
-    "webpack-stream": "^4.0.0"
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "chai": "^3.5.0",
+    "chalk": "^2.0.1",
+    "css-loader": "^0.28.5",
+    "eventsource-polyfill": "^0.9.6",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "glob": "^7.1.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "inject-loader": "^3.0.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "open-browser-webpack-plugin": "0.0.5",
+    "sass-loader": "^6.0.6",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.8.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "babel-polyfill": "^6.26.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "vue": "^2.4.2"
   }
 }
